@@ -1,185 +1,532 @@
-
-
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Báo Tường Điện Tử - Quân Đội Nhân Dân Việt Nam</title>
- <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
- <style>
- :root {
- --red-military: #b71c1c;
- --red-bright: #d32f2f;
- --gold-star: #ffeb3b;
- --gold-dark: #f57f17;
- --green-army: #2e4600;
- --green-dark: #1b2e00;
- --bg-cream: #fbf9f1;
- --bg-paper: #f4eee0;
- --text-main: #212121;
- --shadow-card: 0 8px 24px rgba(0,0,0,0.15);
- }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Tường Điện Tử - Quân Đội Nhân Dân Việt Nam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --red-military: #b71c1c;
+            --red-bright: #d32f2f;
+            --gold-star: #ffeb3b;
+            --gold-dark: #f57f17;
+            --green-army: #2e4600;
+            --green-dark: #1b2e00;
+            --bg-cream: #fbf9f1;
+            --bg-paper: #f4eee0;
+            --text-main: #212121;
+            --shadow-card: 0 8px 24px rgba(0,0,0,0.15);
+        }
 
- * {
- box-sizing: border-box;
- margin: 0;
- padding: 0;
- }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
- body {
- font-family: 'Roboto', sans-serif;
- background-color: var(--bg-cream);
- color: var(--text-main);
- line-height: 1.6;
- background-image: radial-gradient(#d32f2f 0.5px, transparent 0.5px), radial-gradient(#2e4600 0.5px, var(--bg-cream) 0.5px);
- background-size: 20px 20px;
- background-position: 0 0, 10px 10px;
- }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-main);
+            line-height: 1.6;
+            background-image: radial-gradient(#d32f2f 0.5px, transparent 0.5px), radial-gradient(#2e4600 0.5px, var(--bg-cream) 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
 
- .header {
- background: linear-gradient(135deg, var(--red-military) 0%, #800000 100%);
- color: white;
- text-align: center;
- padding: 40px 20px;
- border-bottom: 8px solid var(--gold-dark);
- position: relative;
- box-shadow: 0 4px 15px rgba(0,0,0,0.3);
- }
+        .header {
+            background: linear-gradient(135deg, var(--red-military) 0%, #800000 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 8px solid var(--gold-dark);
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
 
- .header-star {
- font-size: 50px;
- color: var(--gold-star);
- text-shadow: 0 0 10px rgba(255,235,59,0.8);
- margin-bottom: 10px;
- }
+        .header-star {
+            font-size: 50px;
+            color: var(--gold-star);
+            text-shadow: 0 0 10px rgba(255,235,59,0.8);
+            margin-bottom: 10px;
+        }
 
- .header h1 {
- font-family: 'Merriweather', serif;
- font-size: 2.2rem;
- text-transform: uppercase;
- letter-spacing: 1px;
- margin-bottom: 10px;
- color: var(--gold-star);
- text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
- }
+        .header h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            color: var(--gold-star);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
 
- .header p {
- font-size: 1.1rem;
- font-weight: 500;
- text-transform: uppercase;
- letter-spacing: 2px;
- color: #ffe082;
- }
+        .header p {
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffe082;
+        }
 
- .container {
- max-width: 1100px;
- margin: 30px auto;
- padding: 0 20px;
- }
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
 
- .nav-tabs {
- display: flex;
- justify-content: center;
- gap: 10px;
- margin-bottom: 30px;
- flex-wrap: wrap;
- }
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
 
- .nav-btn {
- background-color: var(--green-army);
- color: white;
- border: 2px solid var(--gold-dark);
- padding: 12px 24px;
- font-size: 1rem;
- font-weight: 700;
- border-radius: 6px;
- cursor: pointer;
- transition: all 0.3s ease;
- box-shadow: 0 4px 6px rgba(0,0,0,0.1);
- }
+        .nav-btn {
+            background-color: var(--green-army);
+            color: white;
+            border: 2px solid var(--gold-dark);
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
 
- .nav-btn:hover, .nav-btn.active {
- background-color: var(--red-military);
- color: var(--gold-star);
- transform: translateY(-2px);
- box-shadow: 0 6px 12px rgba(0,0,0,0.2);
- }
+        .nav-btn:hover, .nav-btn.active {
+            background-color: var(--red-military);
+            color: var(--gold-star);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
 
- .section-card {
- background-color: var(--bg-paper);
- border: 2px solid #d7ccc8;
- border-radius: 12px;
- padding: 30px;
- margin-bottom: 40px;
- box-shadow: var(--shadow-card);
- position: relative;
- }
+        .section-card {
+            background-color: var(--bg-paper);
+            border: 2px solid #d7ccc8;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-card);
+            position: relative;
+        }
 
- .section-title {
- font-family: 'Merriweather', serif;
- color: var(--red-military);
- font-size: 1.6rem;
- border-bottom: 3px double var(--green-army);
- padding-bottom: 10px;
- margin-bottom: 25px;
- display: flex;
- align-items: center;
- gap: 10px;
- }
+        .section-title {
+            font-family: 'Merriweather', serif;
+            color: var(--red-military);
+            font-size: 1.6rem;
+            border-bottom: 3px double var(--green-army);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
- .section-title::before {
- content: "★";
- color: var(--gold-dark);
- font-size: 1.8rem;
- }
+        .section-title::before {
+            content: "★";
+            color: var(--gold-dark);
+            font-size: 1.8rem;
+        }
 
- .history-timeline {
- display: flex;
- flex-direction: column;
- gap: 20px;
- position: relative;
- padding-left: 20px;
- border-left: 4px solid var(--green-army);
- }
+        .history-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+            padding-left: 20px;
+            border-left: 4px solid var(--green-army);
+        }
 
- .timeline-item {
- background: white;
- padding: 20px;
- border-radius: 8px;
- box-shadow: 0 2px 8px rgba(0,0,0,0.08);
- position: relative;
- }
+        .timeline-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: relative;
+        }
 
- .timeline-item::before {
- content: "";
- position: absolute;
- left: -28px;
- top: 24px;
- width: 12px;
- height: 12px;
- background: var(--red-military);
- border: 3px solid var(--gold-star);
- border-radius: 50%;
- }
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -28px;
+            top: 24px;
+            width: 12px;
+            height: 12px;
+            background: var(--red-military);
+            border: 3px solid var(--gold-star);
+            border-radius: 50%;
+        }
 
- .timeline-date {
- font-weight: 900;
- color: var(--red-military);
- font-size: 1.1rem;
- margin-bottom: 5px;
- }
+        .timeline-date {
+            font-weight: 900;
+            color: var(--red-military);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
 
- .gallery-grid {
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
- gap: 25px;
- }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
 
- .gallery-card {
- background: white;
- border-radius: 10px;
- overflow: hidden;
- box-shadow: 0 4px 12px rgba(0,0,0,0.1);
- border: 1px solid #e0e0e0;
+        .gallery-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gallery-img-container {
+            width: 100%;
+            height: 220px;
+            background-color: #1a1a1a;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            padding: 15px;
+            background-color: #fff;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .gallery-caption h4 {
+            color: var(--green-army);
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            font-family: 'Merriweather', serif;
+        }
+
+        .gallery-caption p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .quiz-container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .quiz-question {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #ccc;
+        }
+
+        .quiz-question p {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--green-army);
+            margin-bottom: 12px;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .option-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 15px;
+            background: #f8f9fa;
+            border: 1px solid #de2b2b1a;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .option-label:hover {
+            background: #eef2e6;
+        }
+
+        .quiz-submit-btn {
+            background-color: var(--red-military);
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .quiz-submit-btn:hover {
+            background-color: var(--red-bright);
+        }
+
+        #quiz-result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: none;
+        }
+
+        .result-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 25px;
+            background-color: var(--green-dark);
+            color: #ffe082;
+            font-size: 0.95rem;
+            margin-top: 50px;
+            border-top: 4px solid var(--gold-dark);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.6rem; }
+            .header p { font-size: 0.9rem; }
+            .section-card { padding: 20px 15px; }
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-star">★</div>
+        <h1>Báo Tường Điện Tử Mừng Ngày 22/12</h1>
+        <p>Kỷ niệm Ngày Thành lập Quân đội Nhân dân Việt Nam</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="nav-tabs">
+            <button class="nav-btn active" onclick="scrollToSection('lich-su')">Lịch Sử & Ý Nghĩa</button>
+            <button class="nav-btn" onclick="scrollToSection('tu-lieu')">Tư Liệu Lịch Sử</button>
+            <button class="nav-btn" onclick="scrollToSection('trac-nghiem')">Trắc Nghiệm Tương Tác</button>
+        </div>
+
+        <!-- SECTION 1: LỊCH SỬ -->
+        <section id="lich-su" class="section-card">
+            <h2 class="section-title">Lịch Sử Thành Lập & Các Mốc Mạo Hùng</h2>
+            <div class="history-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">22/12/1944</div>
+                    <p>Thực hiện chỉ thị của Chủ tịch Hồ Chí Minh, Đội <strong>Việt Nam Tuyên Truyền Giải Phóng Quân</strong> chính thức được thành lập tại khu rừng giữa hai tổng Hoàng Hoa Thám và Trần Hưng Đạo thuộc châu Nguyên Bình, tỉnh Cao Bằng. Đội gồm 34 chiến sĩ, do đồng chí Võ Nguyên Giáp trực tiếp chỉ huy.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">25/12/1944 & 26/12/1944</div>
+                    <p>Đội <strong>Việt Nam Tuyên Truyền Giải Phóng Quân</strong> ra quân mưu trí, đánh thắng liên tiếp hai trận tại đồn Phay Khắt và Nà Ngần (Cao Bằng), mở đầu cho truyền thống "đã ra quân là đánh thắng" của Quân đội Nhân dân Việt Nam.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Tháng 5/1945</div>
+                    <p>Đội <strong>Việt Nam Tuyên Truyền Giải Phóng Quân</strong> hợp nhất với Cứu quốc quân thành Việt Nam Giải phóng quân, đóng vai trò nòng cốt cùng toàn dân thực hiện thắng lợi Tổng khởi nghĩa Tháng Tám năm 1945.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">07/05/1954</div>
+                    <p>Chiến thắng lịch sử Điện Biên Phủ "lừng lẫy năm châu, chấn động địa cầu", buộc thực dân Pháp phải ký Hiệp định Giơ-ne-vơ, kết thúc chiến tranh xâm lược tại Đông Dương.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">30/04/1975</div>
+                    <p>Chiến dịch Hồ Chí Minh lịch sử toàn thắng, giải phóng hoàn toàn miền Nam, thống nhất đất nước, khẳng định sức mạnh chiến tranh nhân dân đỉnh cao.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: TƯ LIỆU HÌNH ẢNH -->
+        <section id="tu-lieu" class="section-card">
+            <h2 class="section-title">Thư Viện Ảnh Tư Liệu Lịch Sử Chuẩn Xác</h2>
+            <div class="gallery-grid">
+
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80" 
+                             alt="Lễ thành lập Đội Việt Nam Tuyên Truyền Giải Phóng Quân">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Thành lập Đội Việt Nam Tuyên Truyền Giải Phóng Quân (22/12/1944)</h4>
+                        <p>34 chiến sĩ đầu tiên tuyên thệ dưới cờ đỏ sao vàng tại rừng Trần Hưng Đạo, tỉnh Cao Bằng.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80" 
+                             alt="Đại tướng Võ Nguyên Giáp">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Đại tướng Võ Nguyên Giáp</h4>
+                        <p>Người anh cả của Quân đội Nhân dân Việt Nam, Chỉ huy trưởng đầu tiên của Đội Việt Nam Tuyên Truyền Giải Phóng Quân.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=800&q=80" 
+                             alt="Cờ chiến thắng trên hầm De Castries">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Cờ Quyết chiến Quyết thắng (07/05/1954)</h4>
+                        <p>Lá cờ của Quân đội Nhân dân Việt Nam tung bay trên nóc hầm tướng De Castries, kết thúc Chiến dịch Điện Biên Phủ.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="https://images.unsplash.com/photo-1569012871812-a3b64538239c?auto=format&fit=crop&w=800&q=80" 
+                             alt="Xe tăng tiến vào Dinh Độc Lập">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Xe Tăng Tiến Vào Dinh Độc Lập (30/04/1975)</h4>
+                        <p>Các lực lượng Quân giải phóng tiến vào Dinh Độc Lập, đánh dấu thời khắc miền Nam hoàn toàn giải phóng.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" 
+                             alt="Bộ đội cụ Hồ giúp dân gặt lúa">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Bộ Đội Cụ Hồ Trong Thời Bình</h4>
+                        <p>Hình ảnh các chiến sĩ hỗ trợ nhân dân thu hoạch mùa màng, thắt chặt tình đoàn kết quân - dân gắn bó.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" 
+                             alt="Hải quân Nhân dân Việt Nam">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Bảo Vệ Chủ Quyền Biển Đảo Tổ Quốc</h4>
+                        <p>Các tàu chiến Hải quân Nhân dân Việt Nam hiện đại thực hiện nhiệm vụ tuần tra, vững vàng bảo vệ chủ quyền biển đảo.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 3: TRẮC NGHIỆM -->
+        <section id="trac-nghiem" class="section-card">
+            <h2 class="section-title">Tìm Hiểu Kiến Thức Lịch Sử Quân Đội</h2>
+            <div class="quiz-container">
+                <form id="quiz-form">
+                    
+                    <div class="quiz-question">
+                        <p>Câu 1: Đội Việt Nam Tuyên Truyền Giải Phóng Quân được thành lập vào ngày tháng năm nào?</p>
+                        <div class="quiz-options">
+                            <label class="option-label"><input type="radio" name="q1" value="A"> A. 22/12/1944</label>
+                            <label class="option-label"><input type="radio" name="q1" value="B"> B. 22/12/1945</label>
+                            <label class="option-label"><input type="radio" name="q1" value="C"> C. 19/08/1945</label>
+                            <label class="option-label"><input type="radio" name="q1" value="D"> D. 07/05/1954</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>Câu 2: Ban đầu, Đội Việt Nam Tuyên Truyền Giải Phóng Quân gồm bao nhiêu chiến sĩ?</p>
+                        <div class="quiz-options">
+                            <label class="option-label"><input type="radio" name="q2" value="A"> A. 30 chiến sĩ</label>
+                            <label class="option-label"><input type="radio" name="q2" value="B"> B. 34 chiến sĩ</label>
+                            <label class="option-label"><input type="radio" name="q2" value="C"> C. 50 chiến sĩ</label>
+                            <label class="option-label"><input type="radio" name="q2" value="D"> D. 100 chiến sĩ</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>Câu 3: Ai là người trực tiếp chỉ huy thành lập Đội Việt Nam Tuyên Truyền Giải Phóng Quân?</p>
+                        <div class="quiz-options">
+                            <label class="option-label"><input type="radio" name="q3" value="A"> A. Đồng chí Văn Tiến Dũng</label>
+                            <label class="option-label"><input type="radio" name="q3" value="B"> B. Đồng chí Nguyễn Chí Thanh</label>
+                            <label class="option-label"><input type="radio" name="q3" value="C"> C. Đồng chí Võ Nguyên Giáp</label>
+                            <label class="option-label"><input type="radio" name="q3" value="D"> D. Đồng chí Phạm Văn Đồng</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>Câu 4: Hai trận đánh đầu tiên khẳng định truyền thống "đã ra quân là đánh thắng" của Đội Việt Nam Tuyên Truyền Giải Phóng Quân diễn ra tại đâu?</p>
+                        <div class="quiz-options">
+                            <label class="option-label"><input type="radio" name="q4" value="A"> A. Phay Khắt và Nà Ngần</label>
+                            <label class="option-label"><input type="radio" name="q4" value="B"> B. Tân Trào và Bắc Sơn</label>
+                            <label class="option-label"><input type="radio" name="q4" value="C"> C. Điện Biên Phủ và Đông Khê</label>
+                            <label class="option-label"><input type="radio" name="q4" value="D"> D. Ấp Bắc và Bình Giã</label>
+                        </div>
+                    </div>
+
+                    <button type="button" class="quiz-submit-btn" onclick="checkQuiz()">Nộp Bài Trắc Nghiệm</button>
+                </form>
+
+                <div id="quiz-result"></div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <p>Chào Mừng Ngày Thành Lập Quân Đội Nhân Dân Việt Nam (22/12/1944 - 22/12)</p>
+        <p>Quân đội ta trung với Đảng, hiếu với dân, sẵn sàng chiến đấu hy sinh vì độc lập tự do của Tổ quốc!</p>
+    </footer>
+
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+            
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function checkQuiz() {
+            const answers = {
+                q1: "A",
+                q2: "B",
+                q3: "C",
+                q4: "A"
+            };
+
+            let score = 0;
+            let total = 4;
+
+            for (let i = 1; i <= total; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected && selected.value === answers[`q${i}`]) {
+                    score++;
+                }
+            }
+
+            const resultDiv = document.getElementById('quiz-result');
+            resultDiv.style.display = 'block';
+            resultDiv.className = 'result-success';
+            resultDiv.innerHTML = `Kết quả của bạn: ${score}/${total} câu đúng! ${score === total ? '🎉 Xuất sắc! Bạn nắm rất vững lịch sử Quân đội Nhân dân Việt Nam.' : 'Hãy tiếp tục đọc lại thông tin lịch sử ở trên để đạt điểm tối đa nhé!'}`;
+        }
+    </script>
+</body>
+</html>
