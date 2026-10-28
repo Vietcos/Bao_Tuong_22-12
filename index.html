@@ -1,0 +1,185 @@
+28 Oct, 23:34
+
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Báo Tường Điện Tử - Quân Đội Nhân Dân Việt Nam</title>
+ <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+ <style>
+ :root {
+ --red-military: #b71c1c;
+ --red-bright: #d32f2f;
+ --gold-star: #ffeb3b;
+ --gold-dark: #f57f17;
+ --green-army: #2e4600;
+ --green-dark: #1b2e00;
+ --bg-cream: #fbf9f1;
+ --bg-paper: #f4eee0;
+ --text-main: #212121;
+ --shadow-card: 0 8px 24px rgba(0,0,0,0.15);
+ }
+
+ * {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+
+ body {
+ font-family: 'Roboto', sans-serif;
+ background-color: var(--bg-cream);
+ color: var(--text-main);
+ line-height: 1.6;
+ background-image: radial-gradient(#d32f2f 0.5px, transparent 0.5px), radial-gradient(#2e4600 0.5px, var(--bg-cream) 0.5px);
+ background-size: 20px 20px;
+ background-position: 0 0, 10px 10px;
+ }
+
+ .header {
+ background: linear-gradient(135deg, var(--red-military) 0%, #800000 100%);
+ color: white;
+ text-align: center;
+ padding: 40px 20px;
+ border-bottom: 8px solid var(--gold-dark);
+ position: relative;
+ box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+ }
+
+ .header-star {
+ font-size: 50px;
+ color: var(--gold-star);
+ text-shadow: 0 0 10px rgba(255,235,59,0.8);
+ margin-bottom: 10px;
+ }
+
+ .header h1 {
+ font-family: 'Merriweather', serif;
+ font-size: 2.2rem;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ margin-bottom: 10px;
+ color: var(--gold-star);
+ text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+ }
+
+ .header p {
+ font-size: 1.1rem;
+ font-weight: 500;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ color: #ffe082;
+ }
+
+ .container {
+ max-width: 1100px;
+ margin: 30px auto;
+ padding: 0 20px;
+ }
+
+ .nav-tabs {
+ display: flex;
+ justify-content: center;
+ gap: 10px;
+ margin-bottom: 30px;
+ flex-wrap: wrap;
+ }
+
+ .nav-btn {
+ background-color: var(--green-army);
+ color: white;
+ border: 2px solid var(--gold-dark);
+ padding: 12px 24px;
+ font-size: 1rem;
+ font-weight: 700;
+ border-radius: 6px;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+ }
+
+ .nav-btn:hover, .nav-btn.active {
+ background-color: var(--red-military);
+ color: var(--gold-star);
+ transform: translateY(-2px);
+ box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+ }
+
+ .section-card {
+ background-color: var(--bg-paper);
+ border: 2px solid #d7ccc8;
+ border-radius: 12px;
+ padding: 30px;
+ margin-bottom: 40px;
+ box-shadow: var(--shadow-card);
+ position: relative;
+ }
+
+ .section-title {
+ font-family: 'Merriweather', serif;
+ color: var(--red-military);
+ font-size: 1.6rem;
+ border-bottom: 3px double var(--green-army);
+ padding-bottom: 10px;
+ margin-bottom: 25px;
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ }
+
+ .section-title::before {
+ content: "★";
+ color: var(--gold-dark);
+ font-size: 1.8rem;
+ }
+
+ .history-timeline {
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+ position: relative;
+ padding-left: 20px;
+ border-left: 4px solid var(--green-army);
+ }
+
+ .timeline-item {
+ background: white;
+ padding: 20px;
+ border-radius: 8px;
+ box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+ position: relative;
+ }
+
+ .timeline-item::before {
+ content: "";
+ position: absolute;
+ left: -28px;
+ top: 24px;
+ width: 12px;
+ height: 12px;
+ background: var(--red-military);
+ border: 3px solid var(--gold-star);
+ border-radius: 50%;
+ }
+
+ .timeline-date {
+ font-weight: 900;
+ color: var(--red-military);
+ font-size: 1.1rem;
+ margin-bottom: 5px;
+ }
+
+ .gallery-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 25px;
+ }
+
+ .gallery-card {
+ background: white;
+ border-radius: 10px;
+ overflow: hidden;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+ border: 1px solid #e0e0e0;
